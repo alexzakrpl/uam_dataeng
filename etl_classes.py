@@ -19,7 +19,7 @@ class Deduplicator():
         self.data_table = data_table
     def transform(self) -> list[list]:
         add_data = self.data_table[1::]
-        return self.data_table + add_data 
+        return self.data_table + add_data
 
 
 class JsonLoader():
@@ -57,6 +57,6 @@ class Job():
             data=transformed_data[1::],
             columns=transformed_data[0]
         )
-        self.json_loader.load(df=df, path=self.file_path)
+        self.json_loader.load(df=df, path=self.output_path)
         
     
