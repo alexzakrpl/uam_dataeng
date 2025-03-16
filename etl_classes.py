@@ -22,5 +22,9 @@ class Job():
         input_path: str,
         output_path: str,
         extractor: CsvExtractor,
-        dedubl: Deduplicator):
-        pass
+        dedubl: Deduplicator,
+        json_loader: JsonLoader
+        ):
+        def run(self):
+            pass
+        
