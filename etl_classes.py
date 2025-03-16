@@ -2,11 +2,14 @@ import csv
 import pandas as pd
 from pandas import DataFrame
 
+JSON_INTEND = 4
+JSON_ASCII = False
+
 class CsvExtractor():
     def __init__(self, path):
         self.path = path
     def extract(self) -> list[list]:
-        with open(file=self.path, mode='r') as f:
+        with open(file=self.path, mode='r', encoding='utf-8') as f:
             file_data = csv.reader(f, delimiter=',')
             data_table = []
             for row in file_data:
@@ -35,7 +38,9 @@ class JsonLoader():
             path, 
             orient=self.orient,
             index=self.index,
-            lines=self.lines
+            lines=self.lines,
+            indent=JSON_INTEND,
+            force_ascii=JSON_ASCII
             )
 
 
