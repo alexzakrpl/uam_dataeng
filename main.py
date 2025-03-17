@@ -1,7 +1,7 @@
 import etl_classes
 
 file_input_path = 'pracownicy.csv'
-file_output_path = '/home/alexzakr/programing/uam_dataeng/pracownicy.json'
+file_output_path = 'pracownicy.json'
 
 def main():
 
